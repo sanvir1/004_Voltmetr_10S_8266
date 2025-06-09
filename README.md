@@ -1,3 +1,3 @@
-# vloltmetr_16S_8266_kompensation
+# voltmetr_16S_8266_kompensation
 Мониторинг напряжения аккумуляторов подклеченных по схеме до 16s
 ![Устройство_прототип ver1.0](Pic.PNG)
