@@ -6,3 +6,4 @@
     <img src="../Напряжение.jpg" alt="Устройство_прототип ver2.3 - Напряжение" width="45%" style="margin-right: 5%;">
     <img src="../Проценты.jpg" alt="Устройство_прототип ver2.3 - Проценты" width="45%">
 </div>
+Функции Wifi и Веб страница (http://battery-monitor.local) тоже присутствует.
