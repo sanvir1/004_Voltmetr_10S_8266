@@ -131,7 +131,7 @@ const char* htmlPage = R"rawliteral(
             const container = document.getElementById('batteries');
             container.innerHTML = '';
             
-            for (let i = 1; i <= 10; i++) {
+            for (let i = 1; i <= 13; i++) {
                 container.innerHTML += `
                     <div class="battery" id="battery-${i-1}">
                         <div class="battery-number">Канал C${i}</div>
@@ -176,12 +176,12 @@ const char* htmlPage = R"rawliteral(
                         if (data.status === "Нет данных") {
                             voltageElement.textContent = "";
                         } else {
-                            voltageElement.textContent = `${data.voltage.toFixed(1)} В`;
+                            voltageElement.textContent = `${data.voltage.toFixed(2)} В`;
                         }
                     }
                     
                     if (percentageElement) percentageElement.textContent = `${data.percentage}%`;
-                    if (rangeElement) rangeElement.textContent = `мин: ${data.minVoltage.toFixed(1)} В, макс: ${data.maxVoltage.toFixed(1)} В`;
+                    if (rangeElement) rangeElement.textContent = `мин: ${data.minVoltage.toFixed(2)} В, макс: ${data.maxVoltage.toFixed(2)} В`;
                     if (statusElement) {
                         statusElement.textContent = data.status;
                         statusElement.className = 'status ' + getStatusClass(data.voltage);
@@ -237,7 +237,7 @@ const char* htmlPage = R"rawliteral(
 
         // Обновление всех каналов с задержкой
         function updateAllBatteries() {
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 13; i++) {
                 setTimeout(() => updateBattery(i), i * 200);
             }
         }
